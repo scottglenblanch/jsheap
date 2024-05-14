@@ -1,6 +1,5 @@
-module.exports = class Heap {
+class Heap {
 
-    
     constructor({
         comparator
     }) {
@@ -13,22 +12,25 @@ module.exports = class Heap {
         this.list.push(val)
 
         for(
-            let i = this.list.length - 1; 
+            let childIndex = this.list.length - 1,
+                parentIndex = Math.floor(childIndex / 2),
+                child = this.list[childIndex],
+                parent = this.list[parentIndex]; 
             
-            i > 1 && 
+            childIndex > 1 && 
             !this.comparator({
-                parent: this.list[Math.floor(i /2)],
-                child: this.list[i]
+                child, parent
             });
 
-            i = Math.floor(i / 2)
+            childIndex = Math.floor(childIndex / 2),
+            parentIndex = Math.floor(parentIndex / 2),
+            child = this.list[childIndex],
+            parent = this.list[parentIndex]
         ) {
-            const parentNowChild = this.list[i]
-            const childNowParent = this.list[Math.floor(i / 2)]
-
-            // swap
-            this.list[i] = childNowParent
-            this.list[Math.floor(i / 2)] = parentNowChild
+            
+            // swap parent and child
+            this.list[parentIndex] = child
+            this.list[childIndex] = parent
         }        
     }
 
@@ -36,3 +38,5 @@ module.exports = class Heap {
         return this.list[1]
     }
 }
+
+module.exports = Heap;
