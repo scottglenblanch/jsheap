@@ -23,12 +23,12 @@ module.exports = class Heap {
 
             i = Math.floor(i / 2)
         ) {
-            const newParentValue = this.list[i]
-            const newChildValue = this.list[Math.floor(i / 2)]
+            const parentNowChild = this.list[i]
+            const childNowParent = this.list[Math.floor(i / 2)]
 
             // swap
-            this.list[i] = newChildValue
-            this.list[Math.floor(i / 2)] = newParentValue
+            this.list[i] = childNowParent
+            this.list[Math.floor(i / 2)] = parentNowChild
         }        
     }
 
