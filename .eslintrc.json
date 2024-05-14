@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "plugin:prettier/recommended" // must be last element in "extends"
+  ],
+  "rules": {
+    "keyword-spacing": [
+      "error",
+      { "before": true, "after": true, "multiline": true }
+    ],
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "var", "next": "return" }
+    ],
+    "eol-last": "error"
+  }
+}
