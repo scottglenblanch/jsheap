@@ -1,0 +1,18 @@
+{
+    "configurations": [
+    {
+        "name": "Run Test",
+        "request": "launch",
+        "runtimeArgs": [
+            "run",
+            "test"
+        ],
+        "runtimeExecutable": "npm",
+        "skipFiles": [
+            "<node_internals>/**"
+        ],
+        "type": "node",
+        "console": "integratedTerminal"
+    }
+    ]
+}

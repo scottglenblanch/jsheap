@@ -1,0 +1,19 @@
+{
+  "name": "jsheap",
+  "version": "0.0.1",
+  "description": "JS Heap Example",
+  "main": "./src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-modules ./node_modules/jest/bin/jest.js"
+  },
+  "keywords": [
+    "JS",
+    "Heap"
+  ],
+  "author": "Scott Blanch",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
